@@ -116,10 +116,10 @@ public class PharmacyManagementSystem {
         admin.addMedicine(new Medicine("Ibuprofen", 15.0, 80, "10/2025"), inventory, false);
         admin.addMedicine(new Medicine("Cetirizine", 5.0, 120, "08/2026"), inventory, false);
         admin.addMedicine(new Medicine("Azithromycin", 25.0, 60, "09/2025"), inventory, false);
-        // 🧑 User Login
+        //  User Login
         String uname = JOptionPane.showInputDialog(null, "Enter username:", "Login", JOptionPane.PLAIN_MESSAGE);
         String pass = JOptionPane.showInputDialog(null, "Enter password:", "Login", JOptionPane.PLAIN_MESSAGE);
-        // 👨‍⚕️ Admin flow
+        //  Admin flow
         if (admin.login(uname, pass)) {
             JOptionPane.showMessageDialog(null, "Admin logged in.", "Login Successful", JOptionPane.INFORMATION_MESSAGE);
             int response = JOptionPane.showConfirmDialog(null, "Do you want to add a new medicine?", "Add Medicine", JOptionPane.YES_NO_OPTION);
@@ -133,7 +133,7 @@ public class PharmacyManagementSystem {
                 JOptionPane.showMessageDialog(null, inventory.displayStock(), "Updated Inventory", JOptionPane.INFORMATION_MESSAGE);
             }
         }
-        // 🧑‍💼 Salesperson flow
+        //  Salesperson flow
         else if (sales.login(uname, pass)) {
             JOptionPane.showMessageDialog(null, "Salesperson logged in.", "Login Successful", JOptionPane.INFORMATION_MESSAGE);
             JOptionPane.showMessageDialog(null, inventory.displayStock(), "Current Inventory", JOptionPane.INFORMATION_MESSAGE);
